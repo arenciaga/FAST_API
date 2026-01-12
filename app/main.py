@@ -1,20 +1,20 @@
 import os
 from typing import Union
-
 from fastapi import FastAPI
 
 app = FastAPI()
 
-
 @app.get("/")
 def read_root():
-    # Return all environment variables (for testing)
-    env_vars = {key: value for key, value in os.environ.items()}
-    return {
-        "message": "Environment Variables Test",
-        "env_vars": env_vars,
+    # Filter to show only your custom vars (not AWS_ prefixed)
+    custom_vars = {
+        key: value for key, value in os.environ.items()
+        if not key.startswith(("AWS_", "LAMBDA_", "PATH", "_", "LD_", "PYTHON", "TZ", "SHLVL", "LANG", "LC_", "PWD"))
     }
-
+    return {
+        "message": "Your Custom Environment Variables",
+        "env_vars": custom_vars,
+    }
 
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: Union[str, None] = None):
