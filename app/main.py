@@ -12,7 +12,7 @@ def read_root():
         if not key.startswith(("AWS_", "LAMBDA_", "PATH", "_", "LD_", "PYTHON", "TZ", "SHLVL", "LANG", "LC_", "PWD"))
     }
     return {
-        "message": "Your Custom Environment Variables",
+        "message": "Hello World!",
         "env_vars": custom_vars,
     }
 
