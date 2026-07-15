@@ -4,7 +4,7 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-#Hello Plutooo
+#Hello Hiroto
 @app.get("/")
 def read_root():
     # Filter to show only your custom vars (not AWS_ prefixed)
@@ -13,7 +13,7 @@ def read_root():
         if not key.startswith(("AWS_", "LAMBDA_", "PATH", "_", "LD_", "PYTHON", "TZ", "SHLVL", "LANG", "LC_", "PWD"))
     }
     return {
-        "message": "Hello World!",
+        "message": "Hello Hiroto",
         "env_vars": custom_vars,
     }
 
