@@ -1,6 +1,6 @@
 FROM python:3.8
 
-# work dirrectory for the container
+# working directory for the container
 WORKDIR /code
 
 COPY ./requirements.txt /code/requirements.txt
