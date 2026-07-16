@@ -11,7 +11,7 @@ This codebase is a minimal, production-ready **FastAPI** web application that de
 
 The application exposes a FastAPI server that:
 
-- **GET /** — Returns a greeting "Hello Hiroto" along with a filtered dictionary of the current environment variables. This is useful for debugging cloud/container environments without exposing secrets or noisy system variables.
+- **GET /** — Returns a greeting "Hello" along with a filtered dictionary of the current environment variables. This is useful for debugging cloud/container environments without exposing secrets or noisy system variables.
 - **GET /items/{item_id}** — Standard FastAPI example endpoint that accepts an `item_id` path parameter and an optional `q` query parameter.
 
 It also includes:
@@ -56,4 +56,4 @@ uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 
 This is a lightweight template ideal for learning FastAPI, testing containerized Python web services, or as a starting point for microservices and serverless APIs.
 
-**Note**: The greeting references "Hiroto" — likely the name of the orchestrator or CI/CD system used in this repository's workflow.
+**Note**: The greeting has been updated to a simple "Hello" by Grok.
