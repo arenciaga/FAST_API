@@ -14,7 +14,7 @@ def read_root():
         if not key.startswith(("AWS_", "LAMBDA_", "PATH", "_", "LD_", "PYTHON", "TZ", "SHLVL", "LANG", "LC_", "PWD"))
     }
     return {
-        "message": "Hello Hiroto",
+        "message": "Hello this is Aryan from Hiroto",
         "env_vars": custom_vars,
     }
 
